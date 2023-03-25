@@ -22,3 +22,12 @@ func NewTransaction() *Transaction {
 		CreatedAt: time.Now(),
 	}
 }
+
+func (t *Transaction) ProccessAndValidate(creditCard *CreditCard) {
+	if t.Amount+creditCard.Balance > creditCard.Limit {
+		t.Status = "rejected"
+	} else {
+		t.Status = "approved"
+		creditCard.Balance = creditCard.Balance + t.Amount
+	}
+}
