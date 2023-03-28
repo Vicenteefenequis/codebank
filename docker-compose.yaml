@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/go/src/
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "host.docker.internal:192.168.0.37"
 
   db:
     image: postgres:9.4
@@ -23,7 +23,7 @@ services:
     ports:
       - "5432:5432"
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "host.docker.internal:192.168.0.37"
 
   pgadmin:
     image: dpage/pgadmin4
@@ -36,4 +36,4 @@ services:
     depends_on:
       - db
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "host.docker.internal:192.168.0.37"
