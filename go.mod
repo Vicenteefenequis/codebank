@@ -6,6 +6,7 @@ require (
 	github.com/confluentinc/confluent-kafka-go v1.9.2
 	github.com/go-delve/delve v1.20.1
 	github.com/golang/protobuf v1.5.2
+	github.com/joho/godotenv v1.5.1
 	github.com/lib/pq v1.10.7
 	github.com/satori/go.uuid v1.2.0
 	google.golang.org/grpc v1.46.0
